@@ -3,14 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/TEMP/OneDrive/Hình%20ảnh/Tài%20liệu/NetBeansProjects/PRJ301_CHIIKAWALAND/web/index.html</file>
-            <file>file:/C:/Users/TEMP/OneDrive/Hình%20ảnh/Tài%20liệu/NetBeansProjects/PRJ301_CHIIKAWALAND/web/login.jsp</file>
-            <file>file:/C:/Users/TEMP/OneDrive/Hình%20ảnh/Tài%20liệu/NetBeansProjects/PRJ301_CHIIKAWALAND/web/search.jsp</file>
-            <file>file:/C:/Users/TEMP/OneDrive/Hình%20ảnh/Tài%20liệu/NetBeansProjects/PRJ301_CHIIKAWALAND/src/java/utils/DBUtils.java</file>
-            <file>file:/C:/Users/TEMP/OneDrive/Hình%20ảnh/Tài%20liệu/NetBeansProjects/PRJ301_CHIIKAWALAND/src/java/utils/AuthUtils.java</file>
-            <file>file:/C:/Users/TEMP/OneDrive/Hình%20ảnh/Tài%20liệu/NetBeansProjects/PRJ301_CHIIKAWALAND/web/invalid.jsp</file>
-            <file>file:/C:/Users/TEMP/OneDrive/Hình%20ảnh/Tài%20liệu/NetBeansProjects/PRJ301_CHIIKAWALAND/web/footer.jsp</file>
-            <file>file:/C:/Users/TEMP/OneDrive/Hình%20ảnh/Tài%20liệu/NetBeansProjects/PRJ301_CHIIKAWALAND/web/logout_confirm.jsp</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/productFrom.jsp</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/controller/MainController.java</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/index.html</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/logout_confirm.jsp</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/header.jsp</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/dao/UserDAO.java</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/search.jsp</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/dao/ProductDAO.java</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/login.jsp</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/dto/UserDTO.java</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/dto/ProductDTO.java</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/utils/AuthUtils.java</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/UIlogin.jsp</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/utils/DBUtils.java</file>
+            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/assets/images/mainlogochiikawashiper.png</file>
         </group>
     </open-files>
 </project-private>

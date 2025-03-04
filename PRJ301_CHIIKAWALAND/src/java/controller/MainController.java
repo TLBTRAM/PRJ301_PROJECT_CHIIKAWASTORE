@@ -75,8 +75,8 @@ public class MainController extends HttpServlet {
             if (searchTerm == null) {
                 searchTerm = "";
             }
-            List<ProductDTO> books = prdao.searchByTitle2(searchTerm);
-            request.setAttribute("books", books);
+            List<ProductDTO> products = prdao.searchByTitle2(searchTerm);
+            request.setAttribute("products", products);
             request.setAttribute("searchTerm", searchTerm);
         }
         return url;

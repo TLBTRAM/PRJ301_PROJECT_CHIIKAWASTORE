@@ -188,17 +188,19 @@
                 txtProductID_error = txtProductID_error.equals("null") ? "" : txtProductID_error;
                 String txtTitle_error = request.getAttribute("txtTitle_error") + "";
                 txtTitle_error = txtTitle_error.equals("null") ? "" : txtTitle_error;
+                String txtBrand_error = request.getAttribute("txtBrand_error") + "";
+                txtBrand_error = txtBrand_error.equals("null") ? "" : txtBrand_error;
                 String txtQuantity_error = request.getAttribute("txtQuantity_error") + "";
                 txtQuantity_error = txtQuantity_error.equals("null") ? "" : txtQuantity_error;
             %>
             <div class="form-container">
-                <h1>Book Information</h1>
+                <h1>Products Information</h1>
                 <form action="MainController" method="post">
                     <input type="hidden" name="action" value="add"/>
 
                     <div class="form-group">
-                        <label for="txtBookID">Product ID:</label>
-                        <input type="text" id="txtBookID" name="txtBookID" value="<%=ptdo.getProductID()%>"/>
+                        <label for="txtProductID">Product ID:</label>
+                        <input type="text" id="txtProductID" name="txtProductID" value="<%=ptdo.getProductID()%>"/>
                         <% if (!txtProductID_error.isEmpty()) {%>
                         <div class="error-message"><%=txtProductID_error%></div>
                         <% }%>
@@ -213,8 +215,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="txtAuthor">Brand:</label>
-                        <input type="text" id="txtAuthor" name="txtAuthor" value="<%=ptdo.getBrand()%>"/>
+                        <label for="txtBrand">Brand:</label>
+                        <input type="text" id="txtBrand" name="txtBrand" value="<%=ptdo.getBrand()%>"/>
                     </div>
 
                     <div class="form-group">

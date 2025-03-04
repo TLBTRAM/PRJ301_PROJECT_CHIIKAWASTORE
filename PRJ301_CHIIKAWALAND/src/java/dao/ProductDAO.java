@@ -67,7 +67,7 @@ public class ProductDAO implements IDAO<ProductDTO, String> {
 
     public List<ProductDTO> searchByTitle(String searchTerm) {
         String sql = "SELECT * FROM tblProducts WHERE title LIKE ?";
-        List<ProductDTO> list = new ArrayList<ProductDTO>();
+        List<ProductDTO> list = new ArrayList<>();
         try {
             Connection conn = DBUtils.getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -89,8 +89,8 @@ public class ProductDAO implements IDAO<ProductDTO, String> {
     }
     
      public List<ProductDTO> searchByTitle2(String searchTerm) {
-        String sql = "SELECT * FROM tblBooks WHERE title LIKE ? AND Quantity>0";
-        List<ProductDTO> list = new ArrayList<ProductDTO>();
+        String sql = "SELECT * FROM tblProducts WHERE title LIKE ? AND Quantity>0";
+        List<ProductDTO> list = new ArrayList<>();
         
         try {
             Connection conn = DBUtils.getConnection();
@@ -113,7 +113,7 @@ public class ProductDAO implements IDAO<ProductDTO, String> {
     }
     
     public boolean updateQuantityToZero(String id) {
-        String sql = "UPDATE tblBooks SET Quantity=0 WHERE BookID=?";
+        String sql = "UPDATE tblProducts SET Quantity=0 WHERE BookID=?";
         try {
             Connection conn = DBUtils.getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
