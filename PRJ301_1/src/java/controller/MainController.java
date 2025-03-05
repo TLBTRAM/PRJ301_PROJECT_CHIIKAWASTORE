@@ -5,16 +5,13 @@
  */
 package controller;
 
-
-import dao.ProductDAO;
-import dto.ProductDTO;
+import dao.ProjectDAO;
+import dto.ProjectDTO;
 import dto.UserDTO;
 import java.io.IOException;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -22,13 +19,12 @@ import utils.AuthUtils;
 
 /**
  *
- * @author Admin
+ * @author mah
  */
 @WebServlet(name = "MainController", urlPatterns = {"/MainController"})
-public class MainController extends HttpServlet {
+public class MainController {
 
-    private ProductDAO prdao = new ProductDAO();
-
+    private ProjectDAO prdao = new ProjectDAO();
     private static final String LOGIN_PAGE = "login.jsp";
 
     private String processLogin(HttpServletRequest request, HttpServletResponse response)
@@ -75,8 +71,8 @@ public class MainController extends HttpServlet {
             if (searchTerm == null) {
                 searchTerm = "";
             }
-            List<ProductDTO> products = prdao.searchByTitle2(searchTerm);
-            request.setAttribute("products", products);
+//            List<ProjectDTO> products = prdao.searchByTitle2(searchTerm);
+//            request.setAttribute("products", products);
             request.setAttribute("searchTerm", searchTerm);
         }
         return url;
@@ -88,7 +84,7 @@ public class MainController extends HttpServlet {
         HttpSession session = request.getSession();
         if (AuthUtils.isAdmin(session)) {
             String id = request.getParameter("id");
-            prdao.updateQuantityToZero(id);
+            prdao.updateCancelProject(id);
             // search
             processSearch(request, response);
             url = "search.jsp";
@@ -103,31 +99,31 @@ public class MainController extends HttpServlet {
         if (AuthUtils.isAdmin(session)) {
             try {
                 boolean checkError = false;
-                String productID = request.getParameter("txtProductID");
-                String title = request.getParameter("txtTitle");
-                String brand = request.getParameter("txtBrand");
-                double price = Double.parseDouble(request.getParameter("txtPrice"));
-                int quantity = Integer.parseInt(request.getParameter("txtQuantity"));
-
-                if (productID == null || productID.trim().isEmpty()) {
+                int project_id = Integer.parseInt(request.getParameter("txtProductID"));
+                String project_name = request.getParameter("txtProjectName");
+                String Description = request.getParameter("txtDescription");
+                String Status = request.getParameter("txtStatus");
+                int estimated_launch = Integer.parseInt(request.getParameter("txtEstimateLaunch"));
+                
+                if (project_id < 0 && project_id >12) {
                     checkError = true;
-                    request.setAttribute("txtBookID_error", "Book ID cannot be empty.");
+                    request.setAttribute("txtProjectID_error", "Project ID cannot be empty.");
                 }
 
-                if (quantity < 0) {
-                    checkError = true;
-                    request.setAttribute("txtQuantity_error", "Quantity >=0.");
-                }
+//                if (quantity < 0) {
+//                    checkError = true;
+//                    request.setAttribute("txtQuantity_error", "Quantity >=0.");
+//                }
 
-                ProductDTO product = new ProductDTO(productID, title, brand, price, quantity);
+                ProjectDTO project = new ProjectDTO();
 
                 if (!checkError) {
-                    prdao.create(product);
+                    prdao.create(project);
                     // search
                     url = processSearch(request, response);
                 } else {
-                    url = "productForm.jsp";
-                    request.setAttribute("Products", product);
+                    url = "bookForm.jsp";
+                    request.setAttribute("Products", project);
                 }
             } catch (Exception e) {
             }
@@ -158,7 +154,7 @@ public class MainController extends HttpServlet {
                 }
             }
         } catch (Exception e) {
-            log("Error at MainController: " + e.toString());
+            //log("Error at MainController: " + e.toString());
         } finally {
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);
@@ -174,7 +170,6 @@ public class MainController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
@@ -188,7 +183,6 @@ public class MainController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
@@ -199,7 +193,6 @@ public class MainController extends HttpServlet {
      *
      * @return a String containing servlet description
      */
-    @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
