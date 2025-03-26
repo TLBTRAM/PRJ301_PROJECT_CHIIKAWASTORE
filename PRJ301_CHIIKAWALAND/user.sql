@@ -1,12 +1,10 @@
--- Tạo database
+-- Table of User
 CREATE DATABASE prj301_1820_prjnhomchiikawa
 GO
 
--- Sử dụng database vừa tạo
 USE prj301_1820_prjnhomchiikawa
 GO
 
--- Tạo bảng tblUsers
 CREATE TABLE tblUsers (
     userID varchar(50) PRIMARY KEY,
     fullName nvarchar(100) NOT NULL,
@@ -15,10 +13,9 @@ CREATE TABLE tblUsers (
 );
 GO
 
--- Thêm 3 người dùng mẫu với tên tiếng Việt
 INSERT INTO tblUsers (userID, fullName, roleID, password) VALUES
 ('admin01', N'Quản Trị Viên', 'AD', 'admin123'),
-('user001', N'Nguyễn Văn Anh', 'US', 'user123'),
+('user01', N'Nguyễn Văn Anh', 'US', 'user123'),
 ('user002', N'Trần Thị Bình', 'US', 'user456'),
 ('user003', N'Lê Hoàng Nam', 'US', 'pass789'),
 ('user004', N'Phạm Thị Hồng', 'US', 'hong999'),

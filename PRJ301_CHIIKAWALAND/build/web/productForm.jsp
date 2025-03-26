@@ -324,7 +324,7 @@
                 </h1>
                 
                 <form action="MainController" method="post">
-                    <input type="hidden" name="action" value="add"/>
+                    <input type="hidden" name="action" value="<%=action%>"/>
 
                     <div class="form-group">
                         <label for="txtProductID">Product ID:</label>

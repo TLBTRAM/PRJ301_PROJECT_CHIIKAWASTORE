@@ -228,7 +228,7 @@ public class MainController extends HttpServlet {
                     request.setAttribute("txtQuantity_error", "Quantity must be greater than or equal to 0 !");
                 }
                 
-
+//(String productID, String title, String brand, String category, double price, int quantity, String image)
                 ProductDTO product = new ProductDTO(productID, title, brand, category, price, quantity, image);
 
                 if (!checkError) {
@@ -247,18 +247,11 @@ public class MainController extends HttpServlet {
         return url;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // Main
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         String url = WELCOME;
         try {
