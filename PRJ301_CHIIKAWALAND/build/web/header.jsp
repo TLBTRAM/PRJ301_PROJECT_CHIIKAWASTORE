@@ -60,26 +60,54 @@
         color: #3498db;
     }
 
-    .search-bar {
+    /* Styles for welcome and login logout */
+    .user-section {
         display: flex;
         align-items: center;
-        background: #fff;
-        border-radius: 20px;
-        padding: 0.5rem 1rem;
+        gap: 1rem;
+        margin-left: 1.5rem;
     }
 
-    .search-input {
-        border: none;
-        outline: none;
-        padding: 0.2rem;
-        width: 200px;
+    .welcome-text {
+        color: #000000;
+        font-size: 0.95rem;
     }
 
-    .search-button {
-        background: none;
+    .user-name {
+        color: #58C7F4;
+        font-weight: bold;
+    }
+
+    .logout-btn {
+        background-color: #e74c3c;
+        color: white;
         border: none;
+        border-radius: 6px;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
         cursor: pointer;
-        color: #2c3e50;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .logout-btn:hover {
+        background-color: #c0392b;
+        transform: scale(1.05);
+    }
+
+    .login-b {
+        background-color: #58C7F4;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .login-b:hover {
+        background-color: #0590C9;
+        transform: scale(1.05);
     }
 </style>
 
@@ -107,13 +135,8 @@
                     <li class="menu-item"><a href="#">|</a></li>
                     <li class="menu-item"><a href="#">Liên hệ</a></li>
                 </ul>
-                <div class="search-bar">
-                    <input type="text" class="search-input" placeholder="Tìm kiếm...">
-                    <button class="search-button">🔍</button>
-                </div>
                 <%  if (AuthUtils.isLoggedIn(session)) {
                         UserDTO userHeader = AuthUtils.getUser(session);
-
                 %>
                 <div class="user-section">
                     <span class="welcome-text">Xin chào, <span class="user-name"><%=userHeader.getFullName()%></span>!</span>
@@ -122,7 +145,11 @@
                         <input type="submit" value="Đăng xuất" class="logout-btn"/>
                     </form>
                 </div>
-                <%}%>
+                <%} else {%>
+                <a href="login.jsp">
+                    <input type="submit" value="Đăng nhập" class="login-b"/>
+                </a>
+                <% }%>
         </div>
         </nav>
     </div>

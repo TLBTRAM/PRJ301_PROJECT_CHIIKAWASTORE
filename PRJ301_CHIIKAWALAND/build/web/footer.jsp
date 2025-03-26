@@ -1,52 +1,59 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <style>
-    .headfooter {
-        background-color: #FFD0D8;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        text-align: center;
-    }
-
-    .headfooter p{
-        text-decoration: none;
-        color: white;
-    }
-
-    .headfooter h5{
-        text-decoration: none;
-        color: white;
-    }
-
+    /* Footer tổng thể */
     .footer {
-        background-color: #FFFFFF;
-        color: #010409;
-        padding: 3rem 0;
+        background-color: #FFD0D8;
+        color: #333;
+        padding: 2rem 0;
         margin-top: 2rem;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
     }
 
+    /* Header nhỏ trên footer */
+    .headfooter {
+        background-color: #FFA5B0;
+        padding: 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* Bố cục container */
     .footer-container {
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 0 auto;
         padding: 0 1rem;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         gap: 2rem;
+        text-align: left;
+    }
+
+    /* Các cột trong footer */
+    .footer-section {
+        flex: 1;
+        min-width: 200px;
+        padding-top: 30px;
     }
 
     .footer-section h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 1rem;
-        color: #3498db;
+        color: #E27D89;
     }
 
     .footer-section p {
-        margin-bottom: 0.5rem;
         font-size: 0.9rem;
         line-height: 1.5;
+        color: #FFFFFF;
     }
 
+    /* Danh sách liên kết */
     .footer-links {
         list-style: none;
+        padding: 0;
     }
 
     .footer-links li {
@@ -54,15 +61,16 @@
     }
 
     .footer-links a {
-        color: #fff;
+        color: #FFFFFF;
         text-decoration: none;
         transition: color 0.3s ease;
     }
 
-    .footer-links a {
-        color: #010409;
+    .footer-links a:hover {
+        color: #E27D89;
     }
 
+    /* Mạng xã hội */
     .social-links {
         display: flex;
         gap: 1rem;
@@ -70,23 +78,26 @@
     }
 
     .social-links a {
-        color: #fff;
-        text-decoration: none;
         font-size: 1.5rem;
+        color: #E27D89;
+        transition: transform 0.3s ease;
     }
 
+    .social-links a:hover {
+        transform: scale(1.1);
+    }
+
+    /* Bản quyền */
     .copyright {
-        text-align: center;
-        padding-top: 2rem;
         margin-top: 2rem;
-        border-top: 1px solid #34495e;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        color: #555;
     }
 </style>
 
 <footer class="footer">
     <div class ="headfooter">
-        <p> Giao hàng trong 1 tiếng bruh </p>
+        <h2> Giao hàng trong 1 tiếng bruh </h2>
     </div>
     <div class="footer-container">
         <div class="footer-section">
