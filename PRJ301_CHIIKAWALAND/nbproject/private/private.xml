@@ -2,9 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
-            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/controller/MainController.java</file>
-            <file>file:/D:/code/github/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/dao/ProductDAO.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/controller/MainController.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/productForm.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/src/java/dao/ProductDAO.java</file>
+            <file>file:/C:/Users/Admin/Documents/GitHub/PRJ301_PROJECT_CHIIKAWALAND/PRJ301_CHIIKAWALAND/web/dashBoard.jsp</file>
         </group>
+>>>>>>> f7423525a8a262b90f213a7bcd651e87c20852d7
     </open-files>
 </project-private>
