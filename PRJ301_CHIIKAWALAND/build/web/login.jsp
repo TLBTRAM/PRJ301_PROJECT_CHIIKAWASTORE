@@ -1,22 +1,24 @@
-<%-- 
-    Document   : login
-    Created on : 04-03-2025, 01:14:44
-    Author     : mah
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Đăng nhập</title>
+        <link rel="icon" type="image/png" href="assets/images/logo.png">
+        <title>Chiikawa Land - Login</title>
         <style>
+            /* Tổng thể */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #FFFDDE;
+            }
+
+            /* Khu vực đăng nhập */
             .login-container {
                 min-height: 500px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: #f5f5f5;
+                background-color: #FFFDDE;
                 padding: 20px;
             }
 
@@ -29,51 +31,59 @@
                 max-width: 400px;
             }
 
-            .form-group {
+            /* Tiêu đề */
+            .form-title {
+                font-size: 24px;
+                font-weight: bold;
+                color: #444;
                 margin-bottom: 20px;
+                text-align: center;
+            }
+
+            /* Nhóm nhập liệu */
+            .form-group {
+                margin-bottom: 18px;
+                text-align: left;
             }
 
             .form-group label {
+                font-size: 14px;
+                font-weight: 600;
+                color: #555;
                 display: block;
-                margin-bottom: 8px;
-                font-weight: 500;
-                color: #333;
+                margin-bottom: 6px;
             }
 
             .form-group input {
                 width: 100%;
-                padding: 10px;
-                border: 1px solid #ddd;
-                border-radius: 4px;
+                padding: 12px;
+                border: 2px solid #FFC8D2;
+                border-radius: 8px;
                 font-size: 16px;
-                transition: border-color 0.3s;
+                transition: 0.3s;
             }
 
             .form-group input:focus {
-                border-color: #4CAF50;
+                border-color: #FF6699;
                 outline: none;
             }
 
+            /* Nút đăng nhập */
             .submit-btn {
-                background-color: #4CAF50;
+                background: linear-gradient(to right, #FF6699, #FF4081);
                 color: white;
-                padding: 12px 20px;
+                padding: 12px 0;
                 border: none;
-                border-radius: 4px;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: bold;
                 cursor: pointer;
                 width: 100%;
-                font-size: 16px;
-                transition: background-color 0.3s;
+                transition: 0.3s;
             }
 
             .submit-btn:hover {
-                background-color: #45a049;
-            }
-
-            .form-title {
-                text-align: center;
-                margin-bottom: 30px;
-                color: #333;
+                background: linear-gradient(to right, #FF4081, #E65C87);
             }
         </style>
     </head>
@@ -96,11 +106,14 @@
                     </div>
 
                     <button type="submit" class="submit-btn">Đăng nhập</button>
-                    
+
                     <%
-                        String message = request.getAttribute("message")+"";
+                        String message = request.getAttribute("message") + "";
                     %>
-                    <%=message.equals("null")?"":message%>
+
+                    <div style="color:red">
+                        <%=message.equals("null") ? "" : message%>
+                    </div>
                 </form>
             </div>
         </div>

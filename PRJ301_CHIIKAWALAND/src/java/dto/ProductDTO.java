@@ -1,30 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dto;
 
-/**
- *
- * @author Admin
- */
 public class ProductDTO {
     private String productID;
     private String title;
     private String brand;
+    private String category;
     private double price;
     private int quantity;
+    private String image;
 
     public ProductDTO() {
+        this.productID = "";
+        this.title = "";
+        this.brand = "";
+        this.category = "";
+        this.price = 0;
+        this.quantity = 0;
+        this.image = "";
     }
 
-    public ProductDTO(String productID, String title, String brand, double price, int quantity) {
+    public ProductDTO(String productID, String title, String brand, String category, double price, int quantity, String image) {
         this.productID = productID;
         this.title = title;
         this.brand = brand;
+        this.category = category;
         this.price = price;
         this.quantity = quantity;
+        this.image = image;
     }
 
     public String getProductID() {
@@ -51,6 +53,14 @@ public class ProductDTO {
         this.brand = brand;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     public double getPrice() {
         return price;
     }
@@ -66,6 +76,15 @@ public class ProductDTO {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+    
     
     
 }

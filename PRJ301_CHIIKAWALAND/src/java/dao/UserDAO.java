@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import dto.UserDTO;
@@ -16,10 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import utils.DBUtils;
 
-/**
- *
- * @author Admin
- */
+
 public class UserDAO implements IDAO<UserDTO, String> {
 
     @Override
@@ -148,7 +140,6 @@ public class UserDAO implements IDAO<UserDTO, String> {
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             String searchPattern = "%" + searchTerm + "%";
-            // Thiết lập giá trị cho tất cả các tham số
             pstmt.setString(1, searchPattern);
             pstmt.setString(2, searchPattern);
             pstmt.setString(3, searchPattern);
